@@ -1,0 +1,14 @@
+version: '3.7'
+
+volumes:
+  nats-data: {}
+  nats-dumps: {}
+
+services:
+  #NATS-------------------------------------------------------------------------------------------------------------------
+  nats-server:
+    container_name: nats-server
+    image: nats:latest
+    ports:
+      - "4222:4222"
+      - "8222:8222"
